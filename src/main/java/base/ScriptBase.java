@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ScriptBase {
-    public  WebDriver driver;
+    public static WebDriver driver;
     public void init() {
         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
         driver= new ChromeDriver();
