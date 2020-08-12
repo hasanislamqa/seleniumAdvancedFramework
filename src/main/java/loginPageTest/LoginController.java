@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginController {
-    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a") WebElement signInTab;
+    @FindBy(xpath = "//a[@class='login']") WebElement signInTab;
 
     @FindBy(id = "email") WebElement inputEmail;
     @FindBy(id = "passwd") WebElement inputPasswd;
