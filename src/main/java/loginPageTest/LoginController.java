@@ -22,7 +22,7 @@ public class LoginController {
         //   WebElement element= driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a"));
         //  element.isDisplayed();
         // System.out.println("element");
-       driver.findElement(By.cssSelector("#header > div.nav > div > div > nav > div.header_user_info > a")).click();
+       driver.findElement(By.cssSelector("a.login")).click();
         System.out.println("signin in clicked");
 // this new css
     }
