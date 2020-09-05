@@ -13,6 +13,7 @@ public class LoginController {
     @FindBy(id = "passwd") WebElement inputPasswd;
 
     @FindBy(css = "#SubmitLogin > span") WebElement logInButton;
+    @FindBy(css="span.navigation_page") WebElement authenticationTab;
 
     public LoginController(WebDriver driver){
         PageFactory.initElements(driver,this);
@@ -28,8 +29,20 @@ public class LoginController {
     }
     public void logIn(){
         signInTab.click();
+        authenticationTab.isDisplayed();
         inputEmail.sendKeys("test@gmail.com");
         inputPasswd.sendKeys("123ertw");
         logInButton.click();
+
+
+
+
+    }
+
+    public void verifyInformationDesk(WebDriver driver, String information){
+        driver.findElement(By.xpath("a[contains(text(),'"+information+"'")).isDisplayed();
+
+
+
     }
 }
