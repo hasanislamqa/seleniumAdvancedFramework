@@ -1,6 +1,8 @@
 package loginPageTest;
 
 import base.ScriptBase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -39,6 +41,14 @@ public void beforeTest(){
        loginController=new LoginController(driver);
 
        loginController.logIn();
+
+
+    }
+    @Test
+    public void verifyMyOrderText(){
+        loginController=new LoginController(driver);
+        loginController.verifyInformationDesk(driver,"My orders");
+
 
     }
     @AfterTest
