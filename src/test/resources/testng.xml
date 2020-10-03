@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite preserve-order="true" name="Suite" parallel="tests" Thread-count="2">
+
+<test name="login Test with firefox">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+        <class name="loginPageTest.LogInPage">
+            <methods>
+                <include name="verifyWebsiteOpen2"></include>
+                <include name="verifyMyOrderText"></include>
+                <include name="verifyNewproductsText"></include>
+                <include name="verifySitemapText"></include>
+                <include name="verifyWomenText"></include>
+                <include name="verifySpecialsText"></include>
+                <include name="verifyWebsiteOpen2"></include>
+                <include name="verifyMyOrderText"></include>
+                <include name="verifyNewproductsText"></include>
+                <include name="verifySitemapText"></include>
+                <include name="verifyWomenText"></include>
+                <include name="verifySpecialsText"></include>
+                <include name="verifyWebsiteOpen2"></include>
+                <include name="verifyMyOrderText"></include>
+                <include name="verifyNewproductsText"></include>
+                <include name="verifySitemapText"></include>
+                <include name="verifyWomenText"></include>
+                <include name="verifySpecialsText"></include>
+            </methods>
+        </class>
+        <class name="homePageTest.HomePage">
+        </class>
+    </classes>
+</test>
+    <test name="login Test with chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="loginPageTest.LogInPage">
+                <methods>
+                    <include name="verifyWebsiteOpen2"></include>
+                    <include name="verifyMyOrderText"></include>
+                    <include name="verifyNewproductsText"></include>
+                    <include name="verifySitemapText"></include>
+                    <include name="verifyWomenText"></include>
+                    <include name="verifySpecialsText"></include>
+                    <include name="verifyWebsiteOpen2"></include>
+                    <include name="verifyMyOrderText"></include>
+                    <include name="verifyNewproductsText"></include>
+                    <include name="verifySitemapText"></include>
+                    <include name="verifyWomenText"></include>
+                    <include name="verifySpecialsText"></include>
+                    <include name="verifyWebsiteOpen2"></include>
+                    <include name="verifyMyOrderText"></include>
+                    <include name="verifyNewproductsText"></include>
+                    <include name="verifySitemapText"></include>
+                    <include name="verifyWomenText"></include>
+                    <include name="verifySpecialsText"></include>
+                </methods>
+            </class>
+            <class name="homePageTest.HomePage">
+            </class>
+        </classes>
+    </test>
+
+    
+</suite>

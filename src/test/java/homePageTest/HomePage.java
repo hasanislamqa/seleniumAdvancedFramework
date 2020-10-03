@@ -9,7 +9,7 @@ public class HomePage extends ScriptBase {
 
     @Test
     public void verifyContactUsButtonDisplayed(){
-        init();
+
 
 homePageController=new HomePageController(driver);
 homePageController.contactUsButton();

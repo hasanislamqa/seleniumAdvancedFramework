@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LoginController {
     @FindBy(xpath = "//a[@class='login']") WebElement signInTab;
@@ -14,7 +15,7 @@ public class LoginController {
 
     @FindBy(css = "#SubmitLogin > span") WebElement logInButton;
     @FindBy(css="span.navigation_page") WebElement authenticationTab;
-
+    @FindBy(xpath = "//a[@title='My orders']") WebElement endPageInfo;
     public LoginController(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -27,12 +28,17 @@ public class LoginController {
         System.out.println("signin in clicked");
 // this new css
     }
-    public void logIn(){
+    public void logIn() {
         signInTab.click();
+
+     //  Thread.sleep(500);
+
         authenticationTab.isDisplayed();
-        inputEmail.sendKeys("test@gmail.com");
-        inputPasswd.sendKeys("123ertw");
-        logInButton.click();
+
+        Assert.assertEquals(authenticationTab,authenticationTab);
+       // inputEmail.sendKeys("test@gmail.com");
+       // inputPasswd.sendKeys("123ertw");
+       // logInButton.click();
 
 
 
@@ -40,9 +46,11 @@ public class LoginController {
     }
 
     public void verifyInformationDesk(WebDriver driver, String information){
-        driver.findElement(By.xpath("a[contains(text(),'"+information+"'")).isDisplayed();
+        driver.findElement(By.xpath("//a[@title='"+information+"']")).isDisplayed();
+
 
 
 
     }
+
 }
